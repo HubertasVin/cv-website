@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+::selection {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.external-link > img {
+  filter: invert(31%) sepia(100%) saturate(3692%) hue-rotate(217deg) brightness(96%) contrast(106%);
+  transition: filter 0.2s ease-in-out;
+}
+.external-link:hover > img {
+  filter: invert(19%) sepia(83%) saturate(2305%) hue-rotate(220deg) brightness(90%) contrast(104%);
+}
