@@ -1,5 +1,3 @@
-import { ExternalLink, Filter } from 'lucide'
-
 interface Project {
   title: string
   description: string
@@ -25,28 +23,28 @@ const projects: Project[] = [
     description:
       'Automated installation script for system setup, streamlining the process of configuring new systems.',
     link: 'https://github.com/HubertasVin/installation-script',
-    tech: ['Shell', 'Linux', 'Automation'],
+    tech: ['Linux', 'Shell', 'Automation'],
   },
   {
     title: 'Ansible Server Setup',
     description:
       'Server configuration automation using Ansible, enabling consistent and repeatable server deployments.',
     link: 'https://github.com/HubertasVin/ansible-server-setup',
-    tech: ['Ansible', 'Automation', 'Linux'],
+    tech: ['Linux', 'Ansible', 'Automation'],
   },
   {
     title: 'POS System',
     description:
       'Point of Sale system implementation with comprehensive features for retail management.',
     link: 'https://github.com/HubertasVin/pos-1206',
-    tech: ['Java', 'Spring Boot', 'Docker', 'AWS SNS'],
+    tech: ['Spring Boot', 'Java', 'Docker', 'AWS SNS'],
   },
   {
     title: 'Note Taking Website',
     description:
       'A web application for taking and organizing notes with rich text editing capabilities.',
     link: 'https://github.com/HubertasVin/PSI-1',
-    tech: ['C#', '.NET', 'JavaScript'],
+    tech: ['.NET', 'C#', 'JavaScript'],
   },
   {
     title: 'SQL DML with Haskell',
