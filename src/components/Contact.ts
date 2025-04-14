@@ -6,9 +6,9 @@ const icons = {
 }
 
 export function createContact(): HTMLElement {
-  const section = document.createElement('section');
-  section.id = 'contact';
-  section.className = 'py-20';
+  const section = document.createElement('section')
+  section.id = 'contact'
+  section.className = 'py-20'
 
   section.innerHTML = `
     <div class="max-w-4xl mx-auto">
@@ -53,7 +53,7 @@ export function createContact(): HTMLElement {
         </div>
       </div>
     </div>
-  `;
+  `
 
-  return section;
+  return section
 }

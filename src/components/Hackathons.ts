@@ -5,7 +5,7 @@ interface Hackathon {
 }
 
 const icons = {
-  externalLink: '/assets/external-link.svg'
+  externalLink: '/assets/external-link.svg',
 }
 
 const hackathons: Hackathon[] = [

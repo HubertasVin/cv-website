@@ -63,12 +63,12 @@ const projects: Project[] = [
 
 const techColors: { [key: string]: string } = {
   TypeScript: '#3178C6',
-  JavaScript: '#F7DF1E',
+  JavaScript: '#BFAD19',
   Java: '#B07219',
   'C#': '#68217A',
   '.NET': '#512BD4',
   Shell: '#4A4A4A',
-  Linux: '#FCC624',
+  Linux: '#CFA31F',
   'Spring Boot': '#6DB33F',
 }
 
