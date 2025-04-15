@@ -10,6 +10,7 @@
     },
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
+    "module": "es2022",
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
