@@ -55,7 +55,7 @@ const handleTechClick = (tech: string) => {
                 <button
                   v-for="tech in technologies"
                   :key="tech.name"
-                  class="px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2"
+                  class="px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2 cursor-pointer"
                   :style="{ backgroundColor: `${tech.color}15`, color: tech.color }"
                   @click="handleTechClick(tech.name)"
                 >
