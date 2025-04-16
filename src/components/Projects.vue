@@ -142,7 +142,7 @@ defineExpose({
           class="bg-white shadow-lg rounded-xl p-6 transform hover:scale-[1.02] transition-all duration-300 hover:shadow-xl"
         >
           <h3 class="text-xl font-bold text-gray-900 mb-3">{{ project.title }}</h3>
-          <p class="text-gray-600 mb-4 h-24">{{ project.description }}</p>
+          <p class="text-gray-600 mb-4">{{ project.description }}</p>
           <div class="flex flex-wrap gap-2 mb-4">
             <span
               v-for="tech in project.tech"
