@@ -105,7 +105,7 @@ defineExpose({
       <div class="flex justify-between items-center mb-8">
         <h2 class="text-4xl font-bold text-gray-900">Projects</h2>
         <button
-          class="flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
+          class="flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors cursor-pointer"
           @click="toggleFilters"
         >
           <img :src="icons.filter" alt="Filter" class="w-4 h-4" />
@@ -118,7 +118,7 @@ defineExpose({
           <button
             v-for="tech in allTechnologies"
             :key="tech"
-            class="px-3 py-1 rounded-full text-sm font-medium transition-colors"
+            class="px-3 py-1 rounded-full text-sm font-medium transition-colors cursor-pointer"
             :style="{
               backgroundColor:
                 selectedTech === tech
