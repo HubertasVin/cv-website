@@ -34,7 +34,7 @@ const handleFilterTechnology = (tech: string) => {
 
     <footer class="bg-gray-800 text-white py-6 mt-12">
       <div class="container mx-auto px-4 text-center">
-        <p>&copy; {{ new Date().getFullYear() }} Hubertas Vindzigalskis. All rights reserved.</p>
+        <p>&copy; {{ new Date().getFullYear() }} Hubertas Vindžigalskis. All rights reserved.</p>
       </div>
     </footer>
   </div>
