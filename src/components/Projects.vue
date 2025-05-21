@@ -50,6 +50,18 @@ const projects: Project[] = [
     tech: ['.NET', 'C#', 'JavaScript'],
   },
   {
+    title: 'Parallel Programming with C++',
+    description: 'Practice of creating parallel programs in C++ using OpenMP and MPI.',
+    link: 'https://github.com/HubertasVin/parallel-programming-with-cpp',
+    tech: ['C++', 'OpenMP', 'MPI'],
+  },
+  {
+    title: 'CV Website',
+    description: 'Personal CV website to showcase my projects.',
+    link: 'https://github.com/HubertasVin/cv-website',
+    tech: ['Vue', 'TypeScript', 'Tailwind CSS'],
+  },
+  {
     title: 'SQL DML with Haskell',
     description: 'Implementation of SQL Data Manipulation Language using Haskell.',
     link: 'https://github.com/HubertasVin/SQL-DML-with-Haskell',
