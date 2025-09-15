@@ -44,7 +44,7 @@ const hackathons: Hackathon[] = [
               rel="noopener noreferrer"
               class="external-link inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors duration-200"
             >
-              <span>View Project</span>
+              <span>View project</span>
               <img :src="icons.externalLink" alt="External link" class="w-4 h-4" />
             </a>
           </div>

@@ -48,7 +48,7 @@ const projects: Project[] = [
     tech: ['C++', 'OpenMP', 'MPI'],
   },
   {
-    title: 'Installation Script',
+    title: 'Find string CLI program',
     description: 'A CLI app written in Go that can find all occurances of a string in a given directory.',
     link: 'https://github.com/HubertasVin/findstr',
     tech: ['Go'],
@@ -86,11 +86,15 @@ const techColors: { [key: string]: string } = {
   TypeScript: '#3178C6',
   JavaScript: '#BFAD19',
   Java: '#B07219',
+  'C++': '#00599C',
   'C#': '#68217A',
+  Go: '#00ADD8',
   '.NET': '#512BD4',
+  React: '#61DAFB',
   Shell: '#4A4A4A',
   Linux: '#CFA31F',
   'Spring Boot': '#6DB33F',
+  'Vue.js': '#42B883',
 }
 
 const selectedTech = ref<string | null>(null)
@@ -120,17 +124,17 @@ defineExpose({
 <template>
   <section id="projects" class="py-20">
     <div class="max-w-6xl mx-auto">
-      <div class="flex justify-between items-center mb-8">
+      <div class="relative flex justify-center items-center mb-8">
         <h2 class="text-4xl font-bold text-gray-900">Projects</h2>
         <button
-          class="flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors cursor-pointer"
+          class="absolute right-0 top-1/2 -translate-y-1/2 flex items-center gap-2 px-4 py-2
+          bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors cursor-pointer"
           @click="toggleFilters"
         >
           <img :src="icons.filter" alt="Filter" class="w-4 h-4" />
           Filter
         </button>
       </div>
-
       <div v-show="showFilters" class="mb-8 p-4 bg-white rounded-xl shadow-sm">
         <div class="flex flex-wrap gap-2">
           <button
@@ -180,7 +184,7 @@ defineExpose({
             rel="noopener noreferrer"
             class="external-link inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors duration-200"
           >
-            <span>View Project</span>
+            <span>View project</span>
             <img :src="icons.externalLink" alt="External link" class="w-4 h-4" />
           </a>
         </div>

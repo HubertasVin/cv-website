@@ -5,9 +5,11 @@ import About from './components/About.vue'
 import Projects from './components/Projects.vue'
 import Contact from './components/Contact.vue'
 import Hackathons from './components/Hackathons.vue'
+import Experience from './components/Experience.vue'
 
 const sections = [
   { id: 'about', label: 'About' },
+  { id: 'experience', label: 'Experience' },
   { id: 'hackathons', label: 'Hackathons' },
   { id: 'projects', label: 'Projects' },
   { id: 'contact', label: 'Contact' },
@@ -27,6 +29,7 @@ const handleFilterTechnology = (tech: string) => {
 
     <main class="container mx-auto px-4 py-8">
       <About @filter-technology="handleFilterTechnology" />
+      <Experience />
       <Hackathons />
       <Projects ref="projectsRef" />
       <Contact />
