@@ -2,6 +2,7 @@
 interface Experience {
   name: string
   description: string
+	date: string
   link?: string
 }
 
@@ -14,6 +15,7 @@ const experience: Experience[] = [
     name: 'CERN IT intern',
     description:
       'At CERN, I worked on the CMS experiment, assisting with updates and fixes to their monitoring deployment. My primary responsibility was deploying Prometheus and Grafana to a cluster within their secured testing network. Initially intended as a proof-of-concept, the deployment proved so successful that it is now used in the CMS control room at CERN.',
+    date: '2025 July - 2025 September',
   },
 ]
 </script>
@@ -29,7 +31,8 @@ const experience: Experience[] = [
             :key="e.name"
             class="bg-gray-50 p-6 rounded-lg"
           >
-            <h3 class="text-xl font-semibold mb-3">{{ e.name }}</h3>
+            <h3 class="text-xl font-semibold">{{ e.name }}</h3>
+						<p class="text-gray-400 mb-2">{{ e.date }}</p>
             <p class="text-gray-600 mb-4">{{ e.description }}</p>
             <a
               v-if="e.link"
