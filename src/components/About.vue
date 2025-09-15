@@ -37,7 +37,7 @@ const handleTechClick = (tech: string) => {
 
 <template>
   <section id="about" class="py-20">
-    <div class="max-w-4xl mx-auto">
+    <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl font-bold text-gray-900 mb-8 text-center">About Me</h2>
       <div class="bg-white shadow-lg rounded-xl p-8">
         <div class="flex flex-col md:flex-row items-start gap-8">

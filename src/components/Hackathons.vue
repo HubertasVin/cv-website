@@ -26,7 +26,7 @@ const hackathons: Hackathon[] = [
 
 <template>
   <section id="hackathons" class="py-20">
-    <div class="max-w-4xl mx-auto">
+    <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl font-bold text-gray-900 mb-8 text-center">Hackathons</h2>
       <div class="bg-white shadow-lg rounded-xl p-8">
         <div class="space-y-6">

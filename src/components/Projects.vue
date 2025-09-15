@@ -15,11 +15,43 @@ const icons = {
 
 const projects: Project[] = [
   {
-    title: 'Moonquake Map',
+    title: 'Note Taking Website',
     description:
-      'Interactive visualization of moonquakes using NASA data. Built with TypeScript and modern web technologies.',
-    link: 'https://github.com/HubertasVin/moonquake-map',
-    tech: ['TypeScript', 'React', 'NASA API'],
+      'A web application for taking and organizing notes with rich text editing capabilities.',
+    link: 'https://github.com/HubertasVin/PSI-1',
+    tech: ['.NET', 'C#', 'JavaScript'],
+  },
+  {
+    title: 'POS System',
+    description:
+      'Point of Sale system implementation with comprehensive features for retail management.',
+    link: 'https://github.com/HubertasVin/pos-1206',
+    tech: ['Spring Boot', 'Java', 'Docker', 'AWS SNS'],
+  },
+  {
+    title: 'CV Website',
+    description: 'Personal CV website to showcase my projects.',
+    link: 'https://github.com/HubertasVin/cv-website',
+    tech: ['Vue.js', 'TypeScript', 'Tailwind CSS'],
+  },
+  {
+    title: 'Road System',
+    description:
+      'Java-based application for managing and analyzing road systems and traffic patterns.',
+    link: 'https://github.com/HubertasVin/road-system',
+    tech: ['Java'],
+  },
+  {
+    title: 'Parallel Programming with C++',
+    description: 'Practice of creating parallel programs in C++ using OpenMP and MPI.',
+    link: 'https://github.com/HubertasVin/parallel-programming-with-cpp',
+    tech: ['C++', 'OpenMP', 'MPI'],
+  },
+  {
+    title: 'Installation Script',
+    description: 'A CLI app written in Go that can find all occurances of a string in a given directory.',
+    link: 'https://github.com/HubertasVin/findstr',
+    tech: ['Go'],
   },
   {
     title: 'Installation Script',
@@ -36,43 +68,17 @@ const projects: Project[] = [
     tech: ['Linux', 'Ansible', 'Automation'],
   },
   {
-    title: 'POS System',
+    title: 'Moonquake Map',
     description:
-      'Point of Sale system implementation with comprehensive features for retail management.',
-    link: 'https://github.com/HubertasVin/pos-1206',
-    tech: ['Spring Boot', 'Java', 'Docker', 'AWS SNS'],
-  },
-  {
-    title: 'Note Taking Website',
-    description:
-      'A web application for taking and organizing notes with rich text editing capabilities.',
-    link: 'https://github.com/HubertasVin/PSI-1',
-    tech: ['.NET', 'C#', 'JavaScript'],
-  },
-  {
-    title: 'Parallel Programming with C++',
-    description: 'Practice of creating parallel programs in C++ using OpenMP and MPI.',
-    link: 'https://github.com/HubertasVin/parallel-programming-with-cpp',
-    tech: ['C++', 'OpenMP', 'MPI'],
-  },
-  {
-    title: 'CV Website',
-    description: 'Personal CV website to showcase my projects.',
-    link: 'https://github.com/HubertasVin/cv-website',
-    tech: ['Vue', 'TypeScript', 'Tailwind CSS'],
+      'Interactive visualization of moonquakes using NASA data. Built with TypeScript and modern web technologies.',
+    link: 'https://github.com/HubertasVin/moonquake-map',
+    tech: ['TypeScript', 'React', 'NASA API'],
   },
   {
     title: 'SQL DML with Haskell',
     description: 'Implementation of SQL Data Manipulation Language using Haskell.',
     link: 'https://github.com/HubertasVin/SQL-DML-with-Haskell',
     tech: ['Haskell'],
-  },
-  {
-    title: 'Road System',
-    description:
-      'Java-based application for managing and analyzing road systems and traffic patterns.',
-    link: 'https://github.com/HubertasVin/road-system',
-    tech: ['Java'],
   },
 ]
 
