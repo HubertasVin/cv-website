@@ -43,10 +43,7 @@ const handleTechClick = (tech: string) => {
         <div class="flex flex-col md:flex-row items-start gap-8">
           <div class="flex-1">
             <p class="text-gray-700 text-lg mb-6 leading-relaxed">
-              I am a passionate Software Developer with experience in full-stack development,
-              focusing on creating efficient and scalable solutions. My expertise spans across
-              multiple programming languages and frameworks, allowing me to tackle diverse technical
-              challenges.
+              I am a fourth year Software Engineering with a passion to develop efficient and scalable software solutions. My expertise spans across multiple programming languages and frameworks.
             </p>
 
             <div class="mb-8">
