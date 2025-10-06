@@ -51,7 +51,13 @@ const projects: Project[] = [
     title: 'Find string CLI program',
     description: 'A CLI app written in Go that can find all occurances of a string in a given directory.',
     link: 'https://github.com/HubertasVin/findstr',
-    tech: ['Go'],
+    tech: ['Go', 'Goroutines'],
+  },
+  {
+    title: 'Chanseq - Golang library for ordered parallel output',
+    description: 'A small Go library for easy ordered output in parallel applications.',
+    link: 'https://github.com/HubertasVin/chanseq',
+    tech: ['Go', 'Goroutines'],
   },
   {
     title: 'Installation Script',

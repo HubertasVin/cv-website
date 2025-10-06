@@ -3,11 +3,12 @@ const technologies = [
   { name: 'TypeScript', color: '#3178C6', icon: '/assets/typescript.svg' },
   { name: 'JavaScript', color: '#C4B00A', icon: '/assets/javascript.svg' },
   { name: 'Java', color: '#B07219', icon: '/assets/java.svg' },
+  { name: 'Spring Boot', color: '#6DB33F', icon: '/assets/spring.svg' },
   { name: 'C#', color: '#68217A', icon: '/assets/c_sharp.svg' },
   { name: '.NET', color: '#512BD4', icon: '/assets/dotnet.svg' },
+  { name: 'Go', color: '#00ADD8', icon: '/assets/go.svg' },
   { name: 'Shell', color: '#4A4A4A', icon: '/assets/bash.svg' },
   { name: 'Linux', color: '#CFA31F', icon: '/assets/linux.svg' },
-  { name: 'Spring Boot', color: '#6DB33F', icon: '/assets/spring.svg' },
 ]
 
 const icons = {
