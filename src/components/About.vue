@@ -20,7 +20,7 @@ const icons = {
 const languages = [
   { language: 'Lithuanian', level: 'Native' },
   { language: 'English', level: 'C1' },
-  { language: 'French', level: 'A2' },
+  { language: 'French', level: 'B1' },
 ]
 
 const education = {
@@ -39,12 +39,14 @@ const handleTechClick = (tech: string) => {
 <template>
   <section id="about" class="py-20">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-4xl font-bold text-gray-900 mb-8 text-center">About Me</h2>
-      <div class="bg-white shadow-lg rounded-xl p-8">
+      <h2 class="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">About Me</h2>
+      <div class="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-8">
         <div class="flex flex-col md:flex-row items-start gap-8">
           <div class="flex-1">
-            <p class="text-gray-700 text-lg mb-6 leading-relaxed">
-              I am a fourth year Software Engineering with a passion to develop efficient and scalable software solutions. My expertise spans across multiple programming languages and frameworks.
+            <p class="text-gray-700 dark:text-gray-200 text-lg mb-6 leading-relaxed">
+              I am a fourth year Software Engineering with a passion to develop efficient and
+              scalable software solutions. My expertise spans across multiple programming languages
+              and frameworks.
             </p>
 
             <div class="mb-8">
@@ -53,8 +55,11 @@ const handleTechClick = (tech: string) => {
                 <button
                   v-for="tech in technologies"
                   :key="tech.name"
-                  class="px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2 cursor-pointer"
-                  :style="{ backgroundColor: `${tech.color}15`, color: tech.color }"
+                  class="px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2 cursor-pointer dark:text-gray-200"
+                  :style="{
+                    backgroundColor: `${tech.color}15`,
+                    color: tech.color === '#4A4A4A' ? undefined : tech.color,
+                  }"
                   @click="handleTechClick(tech.name)"
                 >
                   <img :src="tech.icon" :alt="tech.name" class="w-4 h-4" />
@@ -69,7 +74,7 @@ const handleTechClick = (tech: string) => {
                 <div
                   v-for="{ language, level } in languages"
                   :key="language"
-                  class="px-4 py-2 bg-gray-100 rounded-full text-sm font-medium"
+                  class="px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-transparent dark:border-gray-600 rounded-full text-sm font-medium dark:text-gray-200"
                 >
                   {{ language }} - {{ level }}
                 </div>
@@ -78,16 +83,20 @@ const handleTechClick = (tech: string) => {
 
             <div class="mb-8">
               <h3 class="text-xl font-semibold mb-4">Education</h3>
-              <div class="bg-gray-50 p-4 rounded-lg">
+              <div class="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
                 <h4 class="font-semibold">{{ education.school }}</h4>
-                <p class="text-gray-600">{{ education.degree }}</p>
+                <p class="text-gray-600 dark:text-gray-300">{{ education.degree }}</p>
                 <p class="text-gray-500 text-sm">{{ education.period }}</p>
               </div>
             </div>
 
             <div class="flex items-center gap-6">
-              <div class="flex items-center gap-2 text-gray-600">
-                <img :src="icons.mapPin" alt="Map pin" class="w-5 h-5" />
+              <div class="flex items-center gap-2 text-gray-600 dark:text-gray-300">
+                <img
+                  :src="icons.mapPin"
+                  alt="Map pin"
+                  class="w-5 h-5 dark:invert opacity-75 dark:opacity-100"
+                />
                 <span>Vilnius, Lithuania</span>
               </div>
               <a
@@ -96,15 +105,23 @@ const handleTechClick = (tech: string) => {
                 rel="noopener noreferrer"
                 class="text-blue-600 hover:text-blue-800 transition-colors duration-200"
               >
-                <img :src="icons.linkedin" alt="LinkedIn" class="w-5 h-5" />
+                <img
+                  :src="icons.linkedin"
+                  alt="LinkedIn"
+                  class="w-5 h-5 dark:invert opacity-75 dark:opacity-100"
+                />
               </a>
               <a
                 href="https://github.com/HubertasVin"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-gray-700 hover:text-gray-900 transition-colors duration-200"
+                class="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200"
               >
-                <img :src="icons.github" alt="Github" class="w-5 h-5" />
+                <img
+                  :src="icons.github"
+                  alt="Github"
+                  class="w-5 h-5 dark:invert opacity-75 dark:opacity-100"
+                />
               </a>
             </div>
           </div>

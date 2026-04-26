@@ -2,7 +2,7 @@
 interface Experience {
   name: string
   description: string
-	date: string
+  date: string
   link?: string
 }
 
@@ -23,17 +23,19 @@ const experience: Experience[] = [
 <template>
   <section id="experience" class="py-20">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-4xl font-bold text-gray-900 mb-8 text-center">Work experience</h2>
-      <div class="bg-white shadow-lg rounded-xl p-8">
+      <h2 class="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">
+        Work experience
+      </h2>
+      <div class="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-8">
         <div class="space-y-6">
           <div
             v-for="e in experience"
             :key="e.name"
-            class="bg-gray-50 p-6 rounded-lg"
+            class="bg-gray-50 dark:bg-gray-900 p-6 rounded-lg"
           >
             <h3 class="text-xl font-semibold">{{ e.name }}</h3>
-						<p class="text-gray-400 mb-2">{{ e.date }}</p>
-            <p class="text-gray-600 mb-4">{{ e.description }}</p>
+            <p class="text-gray-400 mb-2">{{ e.date }}</p>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">{{ e.description }}</p>
             <a
               v-if="e.link"
               :href="e.link"

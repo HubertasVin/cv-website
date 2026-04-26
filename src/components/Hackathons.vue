@@ -27,16 +27,18 @@ const hackathons: Hackathon[] = [
 <template>
   <section id="hackathons" class="py-20">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-4xl font-bold text-gray-900 mb-8 text-center">Hackathons</h2>
-      <div class="bg-white shadow-lg rounded-xl p-8">
+      <h2 class="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">
+        Hackathons
+      </h2>
+      <div class="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-8">
         <div class="space-y-6">
           <div
             v-for="hackathon in hackathons"
             :key="hackathon.name"
-            class="bg-gray-50 p-6 rounded-lg"
+            class="bg-gray-50 dark:bg-gray-900 p-6 rounded-lg"
           >
             <h3 class="text-xl font-semibold mb-3">{{ hackathon.name }}</h3>
-            <p class="text-gray-600 mb-4">{{ hackathon.description }}</p>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">{{ hackathon.description }}</p>
             <a
               v-if="hackathon.link"
               :href="hackathon.link"

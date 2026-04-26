@@ -49,7 +49,8 @@ const projects: Project[] = [
   },
   {
     title: 'Find string CLI program',
-    description: 'A CLI app written in Go that can find all occurances of a string in a given directory.',
+    description:
+      'A CLI app written in Go that can find all occurances of a string in a given directory.',
     link: 'https://github.com/HubertasVin/findstr',
     tech: ['Go', 'Goroutines'],
   },
@@ -111,7 +112,7 @@ const allTechnologies = Array.from(new Set(projects.flatMap((project) => project
 const filteredProjects = computed(() =>
   selectedTech.value
     ? projects.filter((project) => project.tech.includes(selectedTech.value!))
-    : projects
+    : projects,
 )
 
 const toggleFilters = () => {
@@ -131,30 +132,39 @@ defineExpose({
   <section id="projects" class="py-20">
     <div class="max-w-6xl mx-auto">
       <div class="relative flex justify-center items-center mb-8">
-        <h2 class="text-4xl font-bold text-gray-900">Projects</h2>
+        <h2 class="text-4xl font-bold text-gray-900 dark:text-gray-100">Projects</h2>
         <button
-          class="absolute right-0 top-1/2 -translate-y-1/2 flex items-center gap-2 px-4 py-2
-          bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors cursor-pointer"
+          class="absolute right-0 top-1/2 -translate-y-1/2 flex items-center gap-2 px-4 py-2 bg-gray-200 dark:bg-gray-700 dark:text-gray-200 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors cursor-pointer"
           @click="toggleFilters"
         >
-          <img :src="icons.filter" alt="Filter" class="w-4 h-4" />
+          <img :src="icons.filter" alt="Filter" class="w-4 h-4 dark:invert" />
           Filter
         </button>
       </div>
-      <div v-show="showFilters" class="mb-8 p-4 bg-white rounded-xl shadow-sm">
+      <div v-show="showFilters" class="mb-8 p-4 bg-white dark:bg-gray-800 rounded-xl shadow-sm">
         <div class="flex flex-wrap gap-2">
           <button
             v-for="tech in allTechnologies"
             :key="tech"
             class="px-3 py-1 rounded-full text-sm font-medium transition-colors cursor-pointer"
+            :class="[
+              !techColors[tech] && selectedTech !== tech
+                ? 'bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200'
+                : 'dark:text-gray-200',
+            ]"
             :style="{
               backgroundColor:
                 selectedTech === tech
                   ? techColors[tech] || '#4A5568'
                   : techColors[tech]
-                  ? `${techColors[tech]}15`
-                  : '#EDF2F7',
-              color: selectedTech === tech ? 'white' : 'rgb(55, 65, 81)',
+                    ? `${techColors[tech]}15`
+                    : undefined,
+              color:
+                selectedTech === tech
+                  ? 'white'
+                  : techColors[tech] === '#4A4A4A' || techColors[tech] === '#00599C'
+                    ? undefined
+                    : techColors[tech] || undefined,
             }"
             @click="handleTechFilter(tech)"
           >
@@ -167,18 +177,28 @@ defineExpose({
         <div
           v-for="project in filteredProjects"
           :key="project.title"
-          class="bg-white shadow-lg rounded-xl p-6 transform hover:scale-[1.02] transition-all duration-300 hover:shadow-xl"
+          class="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6 transform hover:scale-[1.02] transition-all duration-300 hover:shadow-xl"
         >
-          <h3 class="text-xl font-bold text-gray-900 mb-3">{{ project.title }}</h3>
-          <p class="text-gray-600 mb-4">{{ project.description }}</p>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">
+            {{ project.title }}
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">{{ project.description }}</p>
           <div class="flex flex-wrap gap-2 mb-4">
             <span
               v-for="tech in project.tech"
               :key="tech"
               class="px-3 py-1 rounded-full text-sm font-medium"
+              :class="[
+                !techColors[tech]
+                  ? 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
+                  : 'dark:text-gray-300',
+              ]"
               :style="{
-                backgroundColor: techColors[tech] ? `${techColors[tech]}15` : '#EDF2F7',
-                color: techColors[tech] || '#4A5568',
+                backgroundColor: techColors[tech] ? `${techColors[tech]}15` : undefined,
+                color:
+                  techColors[tech] === '#4A4A4A' || techColors[tech] === '#00599C'
+                    ? undefined
+                    : techColors[tech] || undefined,
               }"
             >
               {{ tech }}

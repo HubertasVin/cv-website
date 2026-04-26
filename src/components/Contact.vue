@@ -10,15 +10,15 @@ const icons = {
 <template>
   <section id="contact" class="py-20">
     <div class="max-w-4xl mx-auto">
-      <h2 class="text-4xl font-bold text-gray-900 mb-8 text-center">Contact</h2>
-      <div class="bg-white shadow-lg rounded-xl p-8">
-        <p class="text-gray-700 text-lg mb-8 text-center">
+      <h2 class="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">Contact</h2>
+      <div class="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-8">
+        <p class="text-gray-700 dark:text-gray-200 text-lg mb-8 text-center">
           Please feel free to reach out through any of the following channels
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
           <a
             href="mailto:hubertas.vindzigalskis@proton.me"
-            class="w-full flex items-center gap-3 p-4 rounded-xl bg-blue-50 text-blue-700 hover:bg-blue-100 transition-colors flex-wrap"
+            class="w-full flex items-center gap-3 p-4 rounded-xl bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors flex-wrap"
           >
             <img
               :src="icons.mail"
@@ -33,7 +33,7 @@ const icons = {
           </a>
           <a
             href="tel:+37067927176"
-            class="w-full flex items-center gap-3 p-4 rounded-xl bg-green-50 text-green-700 hover:bg-green-100 transition-colors flex-wrap"
+            class="w-full flex items-center gap-3 p-4 rounded-xl bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 hover:bg-green-100 dark:hover:bg-green-900/50 transition-colors flex-wrap"
           >
             <img
               :src="icons.phone"
@@ -67,7 +67,7 @@ const icons = {
             href="https://github.com/HubertasVin"
             target="_blank"
             rel="noopener noreferrer"
-            class="w-full flex items-center gap-3 p-4 rounded-xl bg-gray-800 text-white hover:bg-gray-900 transition-colors"
+            class="w-full flex items-center gap-3 p-4 rounded-xl bg-gray-800 dark:bg-gray-700 text-white hover:bg-gray-900 dark:hover:bg-gray-600 transition-colors"
           >
             <img
               :src="icons.github"
