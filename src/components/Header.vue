@@ -91,6 +91,12 @@ const closeToolsMenu = () => {
                 >
                   String Comparison
                 </a>
+                <a
+                  href="#data-formatter"
+                  class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  Data Formatter
+                </a>
               </div>
             </transition>
           </div>
@@ -139,6 +145,13 @@ const closeToolsMenu = () => {
             >
               String Comparison
             </a>
+            <a
+              href="#data-formatter"
+              class="py-2 pl-4 block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+              @click="showMenu = false"
+            >
+              Data Formatter
+            </a>
           </nav>
         </div>
       </transition>
@@ -151,16 +164,20 @@ const closeToolsMenu = () => {
 .menu-collapse {
   overflow: hidden;
 }
+/* Enter / leave initial states remain collapsed */
 .menu-enter-from,
 .menu-leave-to {
   max-height: 0;
 }
+/* Increase max-height so the mobile menu has enough room to fully expand
+   (prevents the "tools" section from popping in later). */
 .menu-enter-to,
 .menu-leave-from {
-  max-height: 240px;
+  max-height: 640px;
 }
+/* Slightly smoother animation for larger heights */
 .menu-enter-active,
 .menu-leave-active {
-  transition: max-height 0.3s ease;
+  transition: max-height 0.45s ease;
 }
 </style>

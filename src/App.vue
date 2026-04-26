@@ -7,6 +7,7 @@ import Contact from './components/Contact.vue'
 import Hackathons from './components/Hackathons.vue'
 import Experience from './components/Experience.vue'
 import StringComparison from './components/tools/StringComparison.vue'
+import DataFormatter from './components/tools/DataFormatter.vue'
 
 const sections = [
   { id: 'about', label: 'About' },
@@ -28,7 +29,7 @@ const currentHash = ref(window.location.hash)
 onMounted(() => {
   window.addEventListener('hashchange', () => {
     currentHash.value = window.location.hash
-    if (currentHash.value !== '#string-comparison') {
+    if (currentHash.value !== '#string-comparison' && currentHash.value !== '#data-formatter') {
       setTimeout(() => {
         const id = currentHash.value.replace('#', '')
         if (id) {
@@ -49,6 +50,9 @@ onMounted(() => {
     <main class="container mx-auto px-4 py-8 flex-grow">
       <template v-if="currentHash === '#string-comparison'">
         <StringComparison />
+      </template>
+      <template v-else-if="currentHash === '#data-formatter'">
+        <DataFormatter />
       </template>
       <template v-else>
         <About @filter-technology="handleFilterTechnology" />
