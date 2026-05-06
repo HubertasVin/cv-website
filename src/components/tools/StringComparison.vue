@@ -6,7 +6,7 @@ const string1 = ref('')
 const string2 = ref('')
 const ignoreCase = ref(false)
 const trimWhitespace = ref(false)
-const diffMode = ref<'chars' | 'words' | 'lines'>('chars')
+const diffMode = ref<'chars' | 'words' | 'lines'>('words')
 
 const isMatch = computed(() => {
   let s1 = string1.value
